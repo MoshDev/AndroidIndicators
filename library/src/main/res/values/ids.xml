@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="indicators_title" type="id" />
+    <item name="indicators_switcher" type="id" />
+
+</resources>
