@@ -55,5 +55,5 @@ dependencies {
 ![snapshot](https://raw.githubusercontent.com/MoshDev/AndroidIndicators/master/snapshots/2015-01-12%2019_42_02.gif)
 
 
-(or check this youtube video)[http://www.youtube.com/watch?v=UR9ae9WRpBI]
+[or check this youtube video](http://www.youtube.com/watch?v=UR9ae9WRpBI)
 
