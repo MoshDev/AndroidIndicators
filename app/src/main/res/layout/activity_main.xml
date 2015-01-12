@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <android.support.v7.widget.Toolbar
-        android:background="#F00f"
+        android:background="#CFEEF9"
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
@@ -15,7 +15,7 @@
     <com.moshx.indicators.title.TitleIndicator
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:id="@+id/titleIndicator"
-        android:textColor="@android:color/white"
+        android:textColor="@android:color/black"
         android:layout_width="300dp"
         android:layout_height="wrap_content" />
 
@@ -23,5 +23,6 @@
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
 
 </LinearLayout>

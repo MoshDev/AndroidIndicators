@@ -135,9 +135,23 @@ public class TitleIndicator extends FrameLayout implements ObservableView {
     }
 
     public void setTitleTransformer(TitleTransformer transformer) {
+
         if (transformer == null) {
             throw new IllegalArgumentException("TitleTransformer is null.");
         }
+
+        textViewTitle.setX(0);
+        textViewTitle.setY(0);
+        textViewTitle.setAlpha(1);
+        textViewTitle.setRotationX(0);
+        textViewTitle.setRotationY(0);
+
+        textViewSwitcher.setX(0);
+        textViewSwitcher.setY(0);
+        textViewSwitcher.setAlpha(0);
+        textViewSwitcher.setRotationX(0);
+        textViewSwitcher.setRotationY(0);
+
         titleTransformer = transformer;
         titleTransformer.setParentSize(getWidth(), getHeight());
     }

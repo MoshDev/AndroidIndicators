@@ -33,10 +33,11 @@ public class TestFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        TextView textView = new TextView(getActivity());
-        textView.setText("Position: " + pos);
-        textView.setGravity(Gravity.CENTER);
+        View parent = inflater.inflate(R.layout.fragment_test, container, false);
 
-        return textView;
+        TextView textView = (TextView) parent.findViewById(R.id.textView);
+        textView.setText("Position: " + pos);
+
+        return parent;
     }
 }

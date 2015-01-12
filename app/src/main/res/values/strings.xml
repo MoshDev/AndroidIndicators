@@ -5,4 +5,9 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 
+    <string-array name="transformes">
+        <item>Default</item>
+        <item>UpDown</item>
+        <item>3D</item>
+    </string-array>
 </resources>
