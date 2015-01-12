@@ -35,7 +35,7 @@ public class MainActivity extends ActionBarActivity {
 
         TitleIndicator titleIndicator = (TitleIndicator) findViewById(R.id.titleIndicator);
         observer.addObservableView(titleIndicator);
-        titleIndicator.setTitleTransformer(new Title3DTransformer(this));
+//        titleIndicator.setTitleTransformer(new Title3DTransformer(this));
         titleIndicator.setToolBar(toolbar);
 
     }
