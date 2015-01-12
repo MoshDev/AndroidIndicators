@@ -14,12 +14,11 @@ apply plugin: 'com.android.library'
 android {
     compileSdkVersion 21
     buildToolsVersion "21.1.2"
-
     defaultConfig {
         minSdkVersion 15
         targetSdkVersion 21
         versionCode 1
-        versionName "1.0"
+        versionName "0.5.0"
     }
     buildTypes {
         release {
@@ -53,4 +52,46 @@ configurations {
 signing {
     required { has("release") && gradle.taskGraph.hasTask("uploadArchives") }
     sign configurations.archives
+}
+
+
+uploadArchives {
+    configuration = configurations.archives
+    repositories.mavenDeployer {
+        beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
+
+        repository(url: sonatypeRepo) {
+            authentication(userName: sonatypeUsername,
+                    password: sonatypePassword)
+        }
+
+        pom.project {
+            name 'Android Indicators'
+            packaging 'aar'
+            description 'UI Title/Paging Andicators Library'
+            url 'https://github.com/MoshDev/AndroidIndicators'
+
+            scm {
+                url 'scm:git@github.com:MoshDev/AndroidIndicators.git'
+                connection 'scm:git@github.com:MoshDev/AndroidIndicators.git'
+                developerConnection 'scm:git@github.com:MoshDev/AndroidIndicators.git'
+            }
+
+            licenses {
+                license {
+                    name 'The Apache Software License, Version 2.0'
+                    url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    distribution 'repo'
+                }
+            }
+
+            developers {
+                developer {
+                    id 'mosh_java'
+                    name 'Mohammed Ersan'
+                    email 'mr.ersan85@gmail.com'
+                }
+            }
+        }
+    }
 }
