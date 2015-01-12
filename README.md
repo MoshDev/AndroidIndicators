@@ -36,6 +36,7 @@ A simple library to add some effect to screen title.
 
 ## Add to project
 * Using gradle
+*not available yet, sonatype didn't verify the repository yet*
 ```
 dependencies {
     compile 'com.android.support:appcompat-v7:21.0.3'
