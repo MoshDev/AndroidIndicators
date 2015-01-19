@@ -44,6 +44,11 @@ public class MainActivity extends ActionBarActivity {
         titleIndicator.setToolBar(toolbar);
 
 
+        TitleIndicator indicator=new TitleIndicator(this);
+        observer.addObservableView(indicator);
+        indicator.setToolBar(toolbar);
+
+
     }
 
     @Override
