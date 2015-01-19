@@ -8,7 +8,7 @@ A simple library to add some effect to screen title.
 3. 3D (Rotation on Y Axis)
 
 ## Usage
-1. From XML
+1- From XML
 ```
     <com.moshx.indicators.title.TitleIndicator
         android:textAppearance="?android:attr/textAppearanceMedium"
@@ -17,7 +17,7 @@ A simple library to add some effect to screen title.
         android:layout_width="300dp"
         android:layout_height="wrap_content" />
 ```
-2. From Code
+2- From Code
 ```
     TitleIndicator indicator=new TitleIndicator(this);
     observer.addObservableView(indicator);
