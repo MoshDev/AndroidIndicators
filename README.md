@@ -36,11 +36,10 @@ A simple library to add some effect to screen title.
 
 ## Add to project
 * Using gradle
-*not available yet, sonatype didn't verify the repository yet*
 ```
 dependencies {
     compile 'com.android.support:appcompat-v7:21.0.3'
-    compile 'com.moshx:AndroidIndicators:0.5.0'
+    compile 'com.moshx:androidindicators:0.6.0@arr'
 }
 ```
 
