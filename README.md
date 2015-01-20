@@ -29,10 +29,11 @@ A simple library to add some effect to screen title.
 2. All TextView attributes
 
 ## Requirements 
-1. Android support library v7
-2. Android SDK 21
-3. Build Tool 21.1.2
-4. Java 1.7 compilation
+1. Min SDK: 15 (Android 4.0.3–4.0.4 Ice Cream Sandwich)
+2. Android support library v7
+3. Android SDK 21
+4. Build Tool 21.1.2
+5. Java 1.7 compilation
 
 ## Add to project
 * Using gradle
