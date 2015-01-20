@@ -1,3 +1,5 @@
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Android%20Indicators-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/1401)
+
 # Android Indicators
 
 A simple library to add some effect to screen title.
