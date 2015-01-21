@@ -62,7 +62,7 @@ you can download demo apk from [releases](https://github.com/MoshDev/AndroidIndi
 
 
 ## IconicTabsView [preview]
-![Check this Video](http://www.youtube.com/watch?v=706a5B_ql3g)
+[Check this Video](http://www.youtube.com/watch?v=706a5B_ql3g)
 
 
 
