@@ -52,7 +52,8 @@ dependencies {
 ```
 
 
-###Currently in alpha (not tested enough)
+## Demo APK (Unsigned)
+you can download demo apk from [releases](https://github.com/MoshDev/AndroidIndicators/releases) or [**from here**](https://github.com/MoshDev/AndroidIndicators/releases/download/demo/app-debug.apk)
 
 ## Snapshot (gif)
 ![snapshot](https://raw.githubusercontent.com/MoshDev/AndroidIndicators/master/snapshots/2015-01-12%2019_42_02.gif)

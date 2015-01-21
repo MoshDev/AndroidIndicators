@@ -49,8 +49,8 @@ public class MainActivity extends ActionBarActivity {
 
         IconicTabsView iconicTabsView = (IconicTabsView) findViewById(R.id.iconicTabsView);
 //        iconicTabsView.setIconicTabsEffect(new FadeIconicTabsEffect());
-//        iconicTabsView.setIconicTabsEffect(new GreyscaleIconicTabsEffect());
-        iconicTabsView.setIconicTabsEffect(new ArgbIconicTabsEffect(0xFF010101, Color.RED));
+        iconicTabsView.setIconicTabsEffect(new GreyscaleIconicTabsEffect());
+//        iconicTabsView.setIconicTabsEffect(new ArgbIconicTabsEffect(0xFF010101, Color.RED));
         observer.addObservableView(iconicTabsView);
 
         ArgbEvaluator argbEvaluator;
