@@ -99,12 +99,12 @@ public class TitleIndicator extends FrameLayout implements ObservableView {
 
         int direction = -1;
         if (lastPosition != position) {
-            direction = TitleTransformer.DIRECTION_LEFT;
+            direction = ViewPagerObserver.DIRECTION_LEFT;
             if (positionOffset != 0f) {
                 textViewSwitcher.setText(observer.getPageTitle(position));
             }
         } else {
-            direction = TitleTransformer.DIRECTION_RIGHT;
+            direction = ViewPagerObserver.DIRECTION_RIGHT;
             if (positionOffset != 0f) {
                 textViewSwitcher.setText(observer.getPageTitle(position + 1));
             }

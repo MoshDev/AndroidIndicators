@@ -1,5 +1,6 @@
 package com.moshx.androidindicators;
 
+import android.animation.ArgbEvaluator;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -10,11 +11,13 @@ import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.Spinner;
 
 import com.moshx.indicators.observer.ViewPagerObserver;
+import com.moshx.indicators.tab.IconicProvider;
+import com.moshx.indicators.tab.IconicTabsView;
+import com.moshx.indicators.tab.effect.ArgbIconicTabsEffect;
+import com.moshx.indicators.tab.effect.FadeIconicTabsEffect;
+import com.moshx.indicators.tab.effect.GreyscaleIconicTabsEffect;
 import com.moshx.indicators.title.TitleIndicator;
 import com.moshx.indicators.title.transformer.DefaultTitleTransformer;
 import com.moshx.indicators.title.transformer.Title3DTransformer;
@@ -44,9 +47,13 @@ public class MainActivity extends ActionBarActivity {
         titleIndicator.setToolBar(toolbar);
 
 
-        TitleIndicator indicator=new TitleIndicator(this);
-        observer.addObservableView(indicator);
-        indicator.setToolBar(toolbar);
+        IconicTabsView iconicTabsView = (IconicTabsView) findViewById(R.id.iconicTabsView);
+//        iconicTabsView.setIconicTabsEffect(new FadeIconicTabsEffect());
+//        iconicTabsView.setIconicTabsEffect(new GreyscaleIconicTabsEffect());
+        iconicTabsView.setIconicTabsEffect(new ArgbIconicTabsEffect(0xFF010101, Color.RED));
+        observer.addObservableView(iconicTabsView);
+
+        ArgbEvaluator argbEvaluator;
 
 
     }
@@ -75,8 +82,15 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    private class MyAdapter extends FragmentPagerAdapter {
+    private class MyAdapter extends FragmentPagerAdapter implements IconicProvider {
 
+
+        int[] icons = {R.drawable.emo_im_angel, R.drawable.emo_im_cool, R.drawable.emo_im_crying,
+                R.drawable.emo_im_embarrassed, R.drawable.emo_im_foot_in_mouth, R.drawable.emo_im_happy,
+                R.drawable.emo_im_kissing, R.drawable.emo_im_laughing, R.drawable.emo_im_lips_are_sealed, R.drawable.emo_im_money_mouth};
+
+        String[] titles = {"Angel", "Cool", "Crying", "Embarrassed", "Foot in Mouth", "Happy",
+                "Kissing", "Laughing", "Lips are Sealed", "Money"};
 
         public MyAdapter(FragmentManager fm) {
             super(fm);
@@ -89,12 +103,17 @@ public class MainActivity extends ActionBarActivity {
 
         @Override
         public int getCount() {
-            return 10;
+            return 5;
         }
 
         @Override
         public CharSequence getPageTitle(int position) {
-            return "Position:" + position;
+            return titles[position];
+        }
+
+        @Override
+        public int getIconicDrawable(int position) {
+            return icons[position];
         }
     }
 

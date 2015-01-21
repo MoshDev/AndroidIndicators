@@ -3,6 +3,8 @@ package com.moshx.indicators.title.transformer;
 import android.content.Context;
 import android.view.View;
 
+import com.moshx.indicators.observer.ViewPagerObserver;
+
 /**
  * Created by M.Ersan on 1/5/15.
  */
@@ -21,7 +23,7 @@ public class Title3DTransformer extends TitleTransformer {
         view2.setPivotX(0);
         view2.setPivotY(view2.getHeight() / 2);
 
-        if (direction == DIRECTION_LEFT) {
+        if (direction == ViewPagerObserver.DIRECTION_LEFT) {
             view1.setAlpha(1f);//Hiding
             view1.setRotationY(90 * ((1f - positionOffset)));
 

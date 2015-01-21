@@ -7,8 +7,6 @@ import android.view.View;
  */
 public abstract class TitleTransformer {
 
-    public static final int DIRECTION_LEFT = 1;
-    public static final int DIRECTION_RIGHT = 2;
 
     public abstract void transform(View view1, View view2, float positionOffset, int direction);
 

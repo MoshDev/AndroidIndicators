@@ -4,6 +4,8 @@ import android.content.Context;
 import android.util.TypedValue;
 import android.view.View;
 
+import com.moshx.indicators.observer.ViewPagerObserver;
+
 /**
  * Created by M.Ersan on 1/5/15.
  */
@@ -22,7 +24,8 @@ public class UpDownTitleTransformer extends TitleTransformer {
 
     @Override
     public void transform(View view1, View view2, float positionOffset, int direction) {
-        if (direction == DIRECTION_LEFT) {
+        
+        if (direction == ViewPagerObserver.DIRECTION_LEFT) {
             view1.setAlpha(positionOffset);//Hiding
             view1.setY(bottomPosition * (1f - positionOffset));//Moving to right
 

@@ -11,6 +11,9 @@ import java.util.ArrayList;
  */
 public class ViewPagerObserver implements ViewPager.OnPageChangeListener {
 
+    public static final int DIRECTION_LEFT = 1;
+    public static final int DIRECTION_RIGHT = 2;
+
     private ArrayList<ObservableView> observableViews = new ArrayList<>();
     private PagerAdapter internalAdapter;
     private ViewPager mViewPager;
@@ -147,5 +150,17 @@ public class ViewPagerObserver implements ViewPager.OnPageChangeListener {
 
     public void setOnPageChangeListener(ViewPager.OnPageChangeListener l) {
         this.externalOnPageChangeListener = l;
+    }
+
+    public PagerAdapter getAdapter() {
+        return internalAdapter;
+    }
+
+    public void setCurrentItem(int position) {
+        mViewPager.setCurrentItem(position);
+    }
+
+    public void setCurrentItem(int position, boolean smoothScroll) {
+        mViewPager.setCurrentItem(position, smoothScroll);
     }
 }

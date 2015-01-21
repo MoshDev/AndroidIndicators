@@ -19,6 +19,11 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content" />
 
+    <com.moshx.indicators.tab.IconicTabsView
+        android:layout_width="match_parent"
+        android:id="@+id/iconicTabsView"
+        android:layout_height="wrap_content" />
+
     <android.support.v4.view.ViewPager
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
