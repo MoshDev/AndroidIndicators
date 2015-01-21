@@ -58,6 +58,11 @@ you can download demo apk from [releases](https://github.com/MoshDev/AndroidIndi
 ## Snapshot (gif)
 ![snapshot](https://raw.githubusercontent.com/MoshDev/AndroidIndicators/master/snapshots/2015-01-12%2019_42_02.gif)
 
-
 [or check this youtube video](http://www.youtube.com/watch?v=UR9ae9WRpBI)
+
+
+## IconicTabsView [preview]
+![Check this Video](http://www.youtube.com/watch?v=706a5B_ql3g)
+
+
 
