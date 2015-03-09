@@ -11,7 +11,7 @@ A simple library to add some effect to screen title.
 
 ## Usage
 1- From XML
-```
+```xml
     <com.moshx.indicators.title.TitleIndicator
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:id="@+id/titleIndicator"
@@ -20,7 +20,7 @@ A simple library to add some effect to screen title.
         android:layout_height="wrap_content" />
 ```
 2- From Code
-```
+```java
     TitleIndicator indicator=new TitleIndicator(this);
     observer.addObservableView(indicator);
     indicator.setToolBar(toolbar);
@@ -39,7 +39,7 @@ A simple library to add some effect to screen title.
 
 ## Add to project
 * Using gradle
-```
+```java
 dependencies {
     compile 'com.android.support:appcompat-v7:21.0.3'
     compile 'com.moshx:androidindicators:0.6.0@arr'
@@ -47,7 +47,7 @@ dependencies {
 ```
 
 * Clone the project and add it as module
-```
+```java
    compile project(':library')
 ```
 
